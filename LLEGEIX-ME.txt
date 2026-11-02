@@ -1,0 +1,49 @@
+SISTEMES NO LINEALS · PRIMERA VERSIÓ
+Banc ampliat amb 40 patrons calibrats a partir del PDF del docent.
+Inclou sistemes incompatibles i casos amb 1, 2, 3 i 4 parelles.
+El desplegable Reptes de referència permet escollir-los directament.
+
+El joc reutilitza el disseny, els 41 avatars, la identificació per correu/convidat
+ i el protocol de puntuacions d'Equacions V2, recuperat de JosepMestres.
+
+PER PROVAR: entra com a convidat. Selecciona les famílies i la dificultat.
+El mode pràctica no envia puntuacions. El repte dona 10/15/20 punts per sistema
+complet segons la dificultat. Hi ha 24 categories (8 famílies × 3 nivells).
+
+ACTIVAR CORREU I PUNTUACIONS
+1. Obre el projecte Apps Script multijoc que ja uses per Equacions V2/Potències.
+2. Afegeix el contingut d'Afegit_Apps_Script.gs AL FINAL del mateix fitxer que
+   declara const JOCS. No substitueixis les funcions existents.
+3. Executa preparaSistemesNoLineals.
+4. Desplega una nova versió de la implementació existent, mantenint l'URL /exec.
+5. Prova un correu del centre i verifica que es recupera el nom.
+El joc inclou la mateixa URL /exec que el codi publicat d'Equacions V2.
+No s'ha modificat el teu Google Sheets ni el teu Apps Script en aquesta sessió.
+La connexió real només es pot donar per activada després d'aquests passos.
+
+EDITOR
+Escriu dins les caselles matemàtiques. Usa a/b, arrels, exponents, log i ln.
+Les fletxes permeten entrar i sortir de numeradors, denominadors i exponents.
+Copia E1/E2 a la casella activa, o recupera un pas de l'historial.
+Per donar candidates: x_1=1; x_2=3. Les parelles es donen en caselles x/y.
+
+LÍMITS DE LA PRIMERA VERSIÓ
+El comprovador és local: identitats algebraiques i resolució simbòlica/numerica
+amb Nerdamer. No és un demostrador general. Quan no certifica un pas, ho indica.
+En el mode Sistema valida combinacions lineals invertibles de les equacions
+i substitucions que conserven una equació equivalent a la segona original.
+Encara no valida tots els canvis simultanis o transformacions no lineals.
+Les famílies seleccionades formen una bossa de reptes. La barreja interna
+implementada afegeix xy a quadràtics/cúbics/altres potències quan estan triats.
+No totes les barreges possibles estan implementades.
+Les arrels numèriques s'identifiquen amb tolerància 1e-8. Les candidates fora
+del domini es poden conservar fins a la comprovació final.
+La comprovació final substitueix les parelles en el sistema original.
+Per a ús avaluatiu cal ampliar i revisar el comprovador amb més casos d'aula.
+
+FITXERS
+index.html conté l'estructura i la identificació compartida.
+quadern.js conté el generador, l'editor i la comprovació.
+banc.js conté el banc calibrat de referència i les projeccions verificades.
+quadern.css conté l'estil del quadern.
+vendor/ inclou MathLive, les fonts i Nerdamer (sense dependències d'un CDN).
