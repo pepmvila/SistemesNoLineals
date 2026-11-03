@@ -79,3 +79,15 @@ El sistema ocupa tota l’amplada disponible. Cada equació es manté en una sol
 
 REVISIÓ DEL COMPROVADOR (03/11)
 Es reconeixen millor les equacions desenvolupades o multiplicades per constants, i les substitucions reversibles a partir del sistema inicial o de l’últim sistema validat. Funciona també en el cas sense arrels reals de la captura. Els passos que el motor no pot certificar es mostren com a avisos neutres, sense comptar errors; no s’accepten només perquè dues equacions no tinguin arrels reals.
+
+QUADERN ÀGIL I ENTRENAMENT (03/11)
+- L’última expressió comprovada queda a l’editor i el cursor hi torna per continuar.
+- Desfés l’últim pas: recupera fins a 30 estats anteriors; un sistema ja puntuat no es pot desfer per tornar a cobrar punts.
+- Comprovacions de substitució sobre l’últim sistema acceptat, reducció i formes desenvolupades, amb avisos neutres si el motor no pot certificar un pas.
+- Botó «No té solucions reals» a la fase d’una incògnita: verifica l’equació i les solucions del sistema abans de completar-lo.
+- Pistes progressives en tres nivells, sense descompte de punts.
+- Quadern, esborrany, parelles i estat desats en aquest navegador, separats per correu. Per recuperar-los després de recarregar, identifica’t i prem «Continua el quadern». El convidat té un quadern local compartit en aquest navegador.
+- «Comunica un problema» prepara un informe per copiar; no envia res automàticament.
+- Família unificada: potències, polinomis i productes xy, també al resum de puntuacions. Es conserven els identificadors del registre existents.
+- Mode «Tria què apareix després de combinar»: racional, biquadrada, identitat notable o factoritzable. Una combinació adequada porta a l’objectiu triat; també es permeten altres procediments correctes.
+No cal modificar el desplegament de l’Apps Script.

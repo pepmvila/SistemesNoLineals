@@ -17,3 +17,5 @@ body{background:#181c34;background-image:none;color:#142039}header{color:#fff}he
 @media(max-width:600px){.nread-equation{font-size:21px}.nside .nbrace{gap:7px}.nside .nbrace:before{font-size:76px}.nside .ncontrols{gap:6px}}
 
 .nfeedback.uncertain{background:#fff7de;color:#725017;border:1px solid #e9ce83}
+
+.nresume{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.nquiet{margin-top:16px}.nquiet button{font-size:12px}.nhint-neutral{background:#f4efff;color:#33215c;border:1px solid #d8c8ee}.nhint-neutral p{margin:10px 0}#nreportbox{margin-top:16px;padding:16px;background:#f5f3fa;border-radius:12px}#nreportbox textarea{width:100%;box-sizing:border-box;font:12px monospace;margin-bottom:10px}#ntraining,#ntarget,#nreference{width:100%;max-width:560px;margin:8px 0 18px;padding:12px;border:1px solid #bec5df;border-radius:10px;background:white;color:#18213d}.nmixlabel{display:block;margin:16px 0}#ntargetsettings{margin:12px 0}#nnone{margin-left:0}@media(max-width:600px){.nresume{align-items:stretch;flex-direction:column}.ntop{flex-wrap:wrap}}
