@@ -5,3 +5,15 @@ header small{color:#726580}.nside math-field{font-size:21px}.nlayout{grid-templa
 math-field::part(menu-toggle){display:none!important}
 
 .nvar{white-space:nowrap;font:24px Cambria,serif}.naddsolution{font-size:26px;width:48px;height:48px;margin-top:10px;color:#6941ad;background:#eee6f8;border:1px dashed #9876c4}@media(max-width:480px){.npair{flex-wrap:wrap}.npair math-field{flex:1 1 60%;}.npair .nvar{min-width:38px}}
+/* Same solid background and white panels as Equacions V2. */
+body{background:#181c34;background-image:none;color:#142039}header{color:#fff}header small{color:#c5c9e5}#notice{color:#ffe4aa}.nhero{color:#fff}.nhero p{color:#ccd0e7}.nlabel{color:#d2bbff}.panel .nlabel{color:#7652b2}.nphase span{background:#ece9f4;color:#51476b}.nphase .on{background:#d2bbff;color:#30204e}footer{color:#c5d4ed}footer a{color:#d2bbff}.nexampletabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.nexample h2{margin-top:14px}.nexample>.nbrace{max-width:620px;margin:15px 0}.nworked{padding-left:25px}.nworked li{padding:12px 5px;border-bottom:1px solid #eee8f5}.nworked math-field{margin-top:8px;font-size:25px}.nexampleanswers{display:flex;gap:28px;flex-wrap:wrap}.nexampleanswers .nbrace:before{font-size:65px}.nexampleanswers math-field{font-size:23px}.nside .nfeedback{font-size:14px}.ncontrols{margin-top:0}
+
+.nhero{align-items:center}.nhero>button{flex-shrink:0}.nhero .ncontrols{align-items:center}
+#app>.ntop{color:white}.nside math-field{font-size:18px}.nside .nbrace{gap:6px}.nside .nbrace:before{font-size:75px}
+
+/* Original systems use the available width instead of a narrow sidebar. */
+.nlayout{grid-template-columns:minmax(0,1fr)}.nside{position:static;min-width:0}.nside>.nbrace{max-width:100%}.nfields{overflow:visible;min-width:0}.nstep .nexpr{min-width:0;overflow:visible}
+.nread-equation{position:relative;min-width:0;width:100%;max-width:100%;font-size:24px;line-height:1.6;overflow:hidden}.nread-equation math-field,.nside .nread-equation math-field{display:block;width:max-content;min-width:0;max-width:none;margin:0;font-size:inherit;white-space:nowrap;transform-origin:top left;overflow:visible}.nfields>.nread-equation{margin:8px 0}.nside .nbrace:before{font-size:88px}.nside .ncontrols{margin-top:12px}.nside .nsummary{margin-top:8px}
+@media(max-width:600px){.nread-equation{font-size:21px}.nside .nbrace{gap:7px}.nside .nbrace:before{font-size:76px}.nside .ncontrols{gap:6px}}
+
+.nfeedback.uncertain{background:#fff7de;color:#725017;border:1px solid #e9ce83}

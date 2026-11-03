@@ -1,14 +1,47 @@
-SISTEMES NO LINEALS · PRIMERA VERSIÓ
-Banc ampliat amb 40 patrons calibrats a partir del PDF del docent.
-Inclou sistemes incompatibles i casos amb 1, 2, 3 i 4 parelles.
-El desplegable Reptes de referència permet escollir-los directament.
+SISTEMES NO LINEALS · REVISIÓ DE NIVELLS
 
-El joc reutilitza el disseny, els 41 avatars, la identificació per correu/convidat
- i el protocol de puntuacions d'Equacions V2, recuperat de JosepMestres.
+NOVETATS
+- Fons fosc llis com Equacions V2 i panells blancs.
+- Botó Dona’m un altre sempre disponible: sorteja entre les famílies marcades,
+  conserva el nivell i no repeteix immediatament el mateix sistema.
+- Mode únic: resoldre un sistema dona 10/15/20 punts segons el nivell.
+  Demanar un altre sistema no suma ni resta punts.
+- Exemples resolts: 18 procediments, tres per cadascuna de les sis famílies.
+- Generació per 90 plantilles i banc de referència amb els 8 exemples del docent.
+- Pistes, Intro per comprovar, historial sota l’editor i resultats x/y amb +.
 
-PER PROVAR: entra com a convidat. Selecciona les famílies i la dificultat.
-El mode pràctica no envia puntuacions. El repte dona 10/15/20 punts per sistema
-complet segons la dificultat. Hi ha 24 categories (8 famílies × 3 nivells).
+COM ES GENEREN ELS REPTES
+La partida normal genera nombres i solucions nous mitjançant 90 plantilles:
+15 de potències/polinomis, 13 de productes xy, 13 de racionals,
+13 de radicals, 12 d’exponencials i 12 de logaritmes, més 12 plantilles mixtes.
+Cada família té entre 12 i 15 estructures, distribuïdes pels tres nivells.
+Les variacions fan canvis afins invertibles sobre estructures verificades.
+El generador recalcula coeficients, solucions exactes, projeccions i domini.
+Comprova internament les solucions abans de mostrar el repte i evita
+transformacions que el motor algebraic no pugui tractar correctament.
+Una baralla per família i nivell reparteix les plantilles abans de repetir-les
+i evita les dues últimes sempre que hi ha prou alternatives. La rotació es
+conserva durant la sessió de navegador. Les variants de grau superior al
+mitjà apareixen només ocasionalment.
+Les mixtes entren quan es marca Barreja i estan seleccionades totes les
+famílies implicades. Quan hi ha una combinació compatible amb el nivell,
+es tria una plantilla mixta aproximadament en un terç dels sortejos.
+El banc de 107 sistemes fixos queda per a Reptes de referència, incloent
+els vuit sistemes de calibratge del docent. Els 18 exemples resolts són
+un apartat separat amb el procediment explicat.
+
+NIVELLS
+Potències/polinomis: segon grau i una relació lineal al nivell fàcil;
+coeficients variats, xy i reducció al mitjà; biquadrades, cúbiques i dues
+quadràtiques al difícil. Les racionals passen de monomis a factors de
+primer grau i després a denominadors per factoritzar. Les altres famílies
+augmenten les substitucions, els coeficients i la feina de domini.
+
+GITHUB
+Descomprimeix el ZIP i substitueix tots els fitxers a l’arrel del repositori.
+Cal pujar també curriculum.js, exemples.js, plantilles.js, generador.js, banc.js i vendor/.
+Conserva la mateixa configuració de GitHub Pages.
+No cal modificar Apps Script si el joc ja estava registrat.
 
 ACTIVAR CORREU I PUNTUACIONS
 1. Obre el projecte Apps Script multijoc que ja uses per Equacions V2/Potències.
@@ -17,33 +50,32 @@ ACTIVAR CORREU I PUNTUACIONS
 3. Executa preparaSistemesNoLineals.
 4. Desplega una nova versió de la implementació existent, mantenint l'URL /exec.
 5. Prova un correu del centre i verifica que es recupera el nom.
-El joc inclou la mateixa URL /exec que el codi publicat d'Equacions V2.
+El joc inclou l’URL /exec indicada pel docent per al registre compartit.
 No s'ha modificat el teu Google Sheets ni el teu Apps Script en aquesta sessió.
 La connexió real només es pot donar per activada després d'aquests passos.
 
-EDITOR
-Escriu dins les caselles matemàtiques. Usa a/b, arrels, exponents, log i ln.
-Les fletxes permeten entrar i sortir de numeradors, denominadors i exponents.
-Copia E1/E2 a la casella activa, o recupera un pas de l'historial.
-Per donar candidates: x_1=1; x_2=3. Les parelles es donen en caselles x/y.
 
-LÍMITS DE LA PRIMERA VERSIÓ
-El comprovador és local: identitats algebraiques i resolució simbòlica/numerica
-amb Nerdamer. No és un demostrador general. Quan no certifica un pas, ho indica.
-En el mode Sistema valida combinacions lineals invertibles de les equacions
-i substitucions que conserven una equació equivalent a la segona original.
-Encara no valida tots els canvis simultanis o transformacions no lineals.
-Les famílies seleccionades formen una bossa de reptes. La barreja interna
-implementada afegeix xy a quadràtics/cúbics/altres potències quan estan triats.
-No totes les barreges possibles estan implementades.
-Les arrels numèriques s'identifiquen amb tolerància 1e-8. Les candidates fora
-del domini es poden conservar fins a la comprovació final.
-La comprovació final substitueix les parelles en el sistema original.
-Per a ús avaluatiu cal ampliar i revisar el comprovador amb més casos d'aula.
+LÍMITS DEL COMPROVADOR
+No és un demostrador general: hi ha transformacions que encara no certifica.
+Valida identitats, combinacions lineals invertibles, projeccions i moltes
+substitucions; els casos no certificats s’indiquen. La comprovació final
+usa les equacions originals i totes les solucions esperades.
+Les comparacions numèriques fan servir una tolerància de 1e-8.
 
 FITXERS
-index.html conté l'estructura i la identificació compartida.
-quadern.js conté el generador, l'editor i la comprovació.
-banc.js conté el banc calibrat de referència i les projeccions verificades.
-quadern.css conté l'estil del quadern.
-vendor/ inclou MathLive, les fonts i Nerdamer (sense dependències d'un CDN).
+index.html: identificació, avatars i connexió al registre.
+quadern.js / quadern.css: editor, quadern i aspecte.
+banc.js: banc anterior i compatibilitat.
+curriculum.js: banc revisat i selecció dels reptes.
+exemples.js: 18 exemples resolts.
+Afegit_Apps_Script.gs: registre de les categories al servidor existent.
+vendor/: MathLive, fonts i Nerdamer.
+
+plantilles.js: estructures verificades del generador.
+generador.js: paràmetres, solucions, combinacions i rotació de plantilles.
+
+REVISIÓ D’ESPAI I CÀLCUL (03/11)
+El sistema ocupa tota l’amplada disponible. Cada equació es manté en una sola línia i es redueix visualment si cal. S’han simplificat sis plantilles i limitat coeficients, nombre de termes i denominadors de les solucions per evitar càlculs massa feixucs.
+
+REVISIÓ DEL COMPROVADOR (03/11)
+Es reconeixen millor les equacions desenvolupades o multiplicades per constants, i les substitucions reversibles a partir del sistema inicial o de l’últim sistema validat. Funciona també en el cas sense arrels reals de la captura. Els passos que el motor no pot certificar es mostren com a avisos neutres, sense comptar errors; no s’accepten només perquè dues equacions no tinguin arrels reals.
